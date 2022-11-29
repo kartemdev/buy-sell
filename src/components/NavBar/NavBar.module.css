@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border: 1px solid grey;
+}
+
+.link {
+  text-decoration: none;
+  color: grey;
+  font-size: 10px;
+}
