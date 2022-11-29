@@ -3,10 +3,22 @@
   align-items: center;
   height: 30px;
   border: 1px solid grey;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: grey;
-  font-size: 10px;
+  font-size: 20px;
+  height: 30px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.link:focus {
+  background-color: grey;
+  color: white;
+  border-radius: 9px 9px 0px 0px;
 }
