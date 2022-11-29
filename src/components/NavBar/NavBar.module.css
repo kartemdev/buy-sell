@@ -17,7 +17,7 @@
   padding-right: 7px;
 }
 
-.link:focus {
+.link[value=true] {
   background-color: grey;
   color: white;
   border-radius: 9px 9px 0px 0px;
