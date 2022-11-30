@@ -1,0 +1,10 @@
+.select {
+  height: 35px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.option {
+  text-align: center;
+}
