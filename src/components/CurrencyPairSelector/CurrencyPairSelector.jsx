@@ -5,8 +5,6 @@ import styles from './CurrencyPairSelector.module.css';
 function CurrencyPairSelector() {
   const optionsList = useSelector((store) => store.currenciesPairs.list);
 
-  const { chosenPair } = useSelector((store) => store.chosenCurrencyPair);
-
   const dispatch = useDispatch();
 
   const changePairHandler = (e) => {

@@ -6,8 +6,8 @@ const currenciesPairsSlice = createSlice({
     list: [
       {
         name: 'USD/CAD_TOM',
-        sidePriceBuy: 1.57,
-        sidePriceSell: 1.53,
+        sidePriceBuy: 1.5766,
+        sidePriceSell: 1.5745,
       },
       {
         name: 'USD/RUB_TOM',
