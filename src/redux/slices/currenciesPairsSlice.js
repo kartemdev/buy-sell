@@ -14,6 +14,21 @@ const currenciesPairsSlice = createSlice({
         sidePriceBuy: 75.53,
         sidePriceSell: 74.52,
       },
+      {
+        name: 'GBP/USD_SPOT',
+        sidePriceBuy: 1.3695,
+        sidePriceSell: 1.3689,
+      },
+      {
+        name: 'GBP/RUB_SPOT',
+        sidePriceBuy: 76.74,
+        sidePriceSell: 75.89,
+      },
+      {
+        name: 'GBP/CAD_SPOT',
+        sidePriceBuy: 1.6467,
+        sidePriceSell: 1.6509,
+      },
     ]
   },
   reducers: {

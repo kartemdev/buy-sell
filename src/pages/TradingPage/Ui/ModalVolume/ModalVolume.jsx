@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addRequest } from '../../../../redux/slices/archiveRequestsSlice';
@@ -18,10 +19,11 @@ function ModalVolume() {
   const submitHandler = () => {
     dispatch(addRequest({
       side: modal.side,
-      price: modal.side === 'BUY' ? chosenPair.sidePriceBuy : chosenPair.sidePriceSell,
+      price: modal.side === 'Buy' ? chosenPair.sidePriceBuy : chosenPair.sidePriceSell,
       instrument: chosenPair.name,
       volume: valueInput,
     }));
+    dispatch(onClose());
   };
 
   return (

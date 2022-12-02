@@ -3,14 +3,14 @@ import styles from './Watch.module.css';
 
 function Watch() {
   const [actualDate, setActualDate] = useState(`
-    ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
+    ${new Date().toLocaleTimeString()}
   `);
 
   setInterval(() => {
     const date = new Date();
 
     setActualDate(`
-      ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}
+      ${date.toLocaleTimeString()}
     `);
   }, 1000);
 
