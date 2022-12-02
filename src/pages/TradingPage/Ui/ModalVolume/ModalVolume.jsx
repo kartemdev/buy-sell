@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-expressions */
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { addRequest } from '../../../../redux/slices/archiveRequestsSlice';
 import { onClose } from '../../../../redux/slices/modalSlice';
 import styles from './ModalVolume.module.css';
 
@@ -10,11 +12,20 @@ function ModalVolume() {
 
   const [valueInput, setValueInput] = useState('');
 
+  const dispatch = useDispatch();
+
   const changeHandler = (e) => setValueInput(e.target.value);
 
-  const submitHandler = (e) => {};
+  const submitHandler = () => {
+    dispatch(addRequest({
+      side: modal.side,
+      price: modal.side === 'Buy' ? chosenPair.sidePriceBuy : chosenPair.sidePriceSell,
+      instrument: chosenPair.name,
+      volume: valueInput,
+    }));
+    dispatch(onClose());
+  };
 
-  const dispatch = useDispatch();
   return (
     <div
       className={modal.active ? `${styles.modal} ${styles.active}` : `${styles.modal}`}
@@ -50,7 +61,7 @@ function ModalVolume() {
             </label>
             <input
               onChange={changeHandler}
-              type="text"
+              type="number"
               id="modalInput"
               value={valueInput}
               className={styles.modalContentInput}

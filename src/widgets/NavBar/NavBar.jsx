@@ -1,24 +1,28 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { setNavbarState } from '../../redux/slices/navbarStateSlice';
 import styles from './NavBar.module.css';
 
 function NavBar() {
-  const [statePage, setStatePage] = useState(1);
+  const { state } = useSelector((store) => store.navabrState);
+
+  const dispatch = useDispatch();
 
   return (
     <nav className={styles.nav}>
       <NavLink
-        onClick={() => setStatePage(1)}
+        onClick={() => dispatch(setNavbarState(1))}
         to="/"
         className={styles.link}
-        value={statePage === 1}
+        value={state === 1}
       >Trading
       </NavLink>
       <NavLink
-        onClick={() => setStatePage(2)}
+        onClick={() => dispatch(setNavbarState(2))}
         to="/archive"
         className={styles.link}
-        value={statePage === 2}
+        value={state === 2}
       >Archive
       </NavLink>
     </nav>
