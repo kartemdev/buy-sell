@@ -19,3 +19,11 @@
   cursor: pointer;
   font-size: 70px;
 }
+
+.btnBuy.disabled {
+  pointer-events: none;
+}
+
+.btnSell.disabled {
+  pointer-events: none;
+}

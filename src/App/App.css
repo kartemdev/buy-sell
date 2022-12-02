@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.MainDiv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppDiv {
+  width: 600px;
+}
+
+.container {
+  height: 500px;
+  border-left: 1px solid rgba(138, 138, 138, 0.5);
+  border-right: 1px solid rgba(138, 138, 138, 0.5);
+  border-bottom: 1px solid rgba(138, 138, 138, 0.5);
+}
+
+

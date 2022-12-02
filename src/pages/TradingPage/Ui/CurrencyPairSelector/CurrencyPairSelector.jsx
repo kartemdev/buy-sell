@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setCurrencyPair } from '../../redux/slices/chosenCurrencyPairSlice';
+import { setCurrencyPair } from '../../../../redux/slices/chosenCurrencyPairSlice';
 import styles from './CurrencyPairSelector.module.css';
 
 function CurrencyPairSelector() {
@@ -25,7 +25,7 @@ function CurrencyPairSelector() {
           key={pair.name}
           value={[pair.name, pair.sidePriceBuy, pair.sidePriceSell]}
           className={styles.option}
-        >{pair.name}
+        >{`${pair.name.split('_')[0] } ${ pair.name.split('_')[1]}`}
         </option>
       ))}
     </select>

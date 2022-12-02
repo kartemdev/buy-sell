@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from '../widgets/NavBar/NavBar';
 import './App.css';
-import TradingPage from './components/TradingPage/TradingPage';
+import TradingPage from '../pages/TradingPage/TradingPage';
 
 function App() {
   return (

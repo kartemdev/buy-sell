@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Watch.module.css';
 
-function TradingWatch() {
+function Watch() {
   const [actualDate, setActualDate] = useState(`
     ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
   `);
@@ -21,4 +21,4 @@ function TradingWatch() {
   );
 }
 
-export default TradingWatch;
+export default Watch;
