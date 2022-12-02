@@ -1,0 +1,29 @@
+.btnContainer {
+  width: 595px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnBuy {
+  border: 0;
+  background-color: white;
+  color: rgb(68, 255, 47);
+  cursor: pointer;
+  font-size: 70px;
+}
+
+.btnSell {
+  border: 0;
+  background-color: white;
+  color: rgb(255, 64, 47);
+  cursor: pointer;
+  font-size: 70px;
+}
+
+.btnBuy.disabled {
+  pointer-events: none;
+}
+
+.btnSell.disabled {
+  pointer-events: none;
+}
