@@ -16,8 +16,12 @@ const chosenCurrencyPairSlice = createSlice({
       state.chosenPair.sidePriceBuy = action.payload.sidePriceBuy;
       state.chosenPair.sidePriceSell = action.payload.sidePriceSell;
     },
+    setPrices(state, action) {
+      state.chosenPair.sidePriceBuy = action.payload.sidePriceBuy;
+      state.chosenPair.sidePriceSell = action.payload.sidePriceSell;
+    }
   }
 });
 
 export default chosenCurrencyPairSlice.reducer;
-export const { setCurrencyPair } = chosenCurrencyPairSlice.actions;
+export const { setCurrencyPair, setPrices } = chosenCurrencyPairSlice.actions;
