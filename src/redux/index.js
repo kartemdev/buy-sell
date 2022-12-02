@@ -3,8 +3,8 @@ import { combineReducers } from 'redux';
 import archiveRequestsSlice from './slices/archiveRequestsSlice';
 import chosenCurrencyPairSlice from './slices/chosenCurrencyPairSlice';
 import currenciesPairsSlice from './slices/currenciesPairsSlice';
-import modalSlice from './slices/modalSlice';
-import navbarStateSlice from './slices/navbarStateSlice';
+import modalSlice from './slices/uiSlices/modalSlice';
+import navbarStateSlice from './slices/uiSlices/navbarStateSlice';
 
 const rootReducer = combineReducers({
   chosenCurrencyPair: chosenCurrencyPairSlice,
