@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { onOpen } from '../../../../redux/slices/modalSlice';
+import { onOpen } from '../../../../redux/slices/uiSlices/modalSlice';
 import styles from './SideButtons.module.css';
 
 function SideButtons() {
