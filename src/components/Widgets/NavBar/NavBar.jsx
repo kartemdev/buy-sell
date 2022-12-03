@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { setNavbarState } from '../../redux/slices/uiSlices/navbarStateSlice';
+import { setNavbarState } from '../../../redux/slices/uiSlices/navbarStateSlice';
 import styles from './NavBar.module.css';
 
 function NavBar() {

@@ -1,6 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setCurrencyPair } from '../../../../redux/slices/chosenCurrencyPairSlice';
-import styles from './CurrencyPairSelector.module.css';
+import styled from 'styled-components';
+import { setCurrencyPair } from '../../redux/slices/chosenCurrencyPairSlice';
+
+const Select = styled.select`
+  height: 55px;
+  width: 300px;
+  font-size: 30px;
+  border-radius: 5px 5px 5px 5px;
+  color: rgb(81, 81, 81);
+  border: 1px solid rgba(138, 138, 138, 0.5);
+`;
 
 function CurrencyPairSelector() {
   const optionsList = useSelector((store) => store.currenciesPairs.list);
@@ -18,17 +27,22 @@ function CurrencyPairSelector() {
   };
 
   return (
-    <select onChange={changePairHandler} defaultValue="selectPair" className={styles.select}>
-      <option value="selectPair" disabled className={styles.option}>SELECT PAIR</option>
+    <Select onChange={changePairHandler} defaultValue="selectPair">
+      <option
+        value="selectPair"
+        disabled
+        style={{ textAlign: 'center' }}
+      >SELECT PAIR
+      </option>
       {optionsList.map((pair) => (
         <option
           key={pair.name}
           value={[pair.name, pair.sidePriceBuy, pair.sidePriceSell]}
-          className={styles.option}
+          style={{ textAlign: 'center' }}
         >{`${pair.name.split('_')[0] } ${ pair.name.split('_')[1]}`}
         </option>
       ))}
-    </select>
+    </Select>
   );
 }
 
