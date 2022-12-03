@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { onClose } from '../../redux/slices/uiSlices/modalSlice';
+import { onClose } from '../../../redux/slices/uiSlices/modalSlice';
 import styles from './Modal.module.css';
 
 function Modal({ children, nameModal }) {
