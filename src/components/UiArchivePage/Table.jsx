@@ -6,13 +6,15 @@ const TableBody = styled.div`
   display: flex;
   margin-top: 8px;
   color: rgba(112, 112, 112, 0.8);
+  border-bottom: 1px solid rgb(134, 134, 134, 0.3);
+  padding-bottom: 2px
 `;
 
 function Table() {
   const { list } = useSelector((store) => store.archiveRequests);
 
   return (
-    <div style={{ width: 600 }}>
+    <div style={{ width: 598 }}>
       <TableHead />
       <div>
         {list.map((req) => (

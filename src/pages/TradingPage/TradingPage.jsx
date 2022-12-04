@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import CurrencyPairSelector from '../../components/UiTradingPage/CurrencyPairSelector';
 import ModalVolume from '../../components/UiTradingPage/ModalVolume/ModalVolume';
 import SideButtons from '../../components/UiTradingPage/SideButtons/SideButtons';
-import Watch from '../../components/Widgets/Watch';
+import Watch from '../../components/widgets/Watch';
 import { setNavbarState } from '../../redux/slices/uiSlices/navbarStateSlice';
 
 const StyledTradingPage = styled.div`

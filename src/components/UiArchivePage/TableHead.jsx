@@ -4,7 +4,7 @@ const StyledTableHead = styled.div`
   display: flex;
   padding-top: 20px;
   padding-bottom: 5px;
-  width: 100%;
+  width: 598;
   border-bottom: 3px solid rgb(134, 134, 134, 0.25);
   color: rgba(112, 112, 112, 0.8);
 `;
