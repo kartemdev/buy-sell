@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Modal from '../../widgets/Modal/Modal';
+import Modal from '../../widgets1/Modal/Modal';
 import { addRequest } from '../../../redux/slices/archiveRequestsSlice';
 import { onClose } from '../../../redux/slices/uiSlices/modalSlice';
 import styles from './ModalVolume.module.css';
