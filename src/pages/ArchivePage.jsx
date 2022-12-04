@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setNavbarState } from '../redux/slices/uiSlices/navbarStateSlice';
-import Table from '../components/UiArchivePage/Table';
+import Table from '../components/archiveUi/Table';
 
 function ArchivePage() {
   const dispatch = useDispatch();
