@@ -34,7 +34,7 @@
 .modalHeader {
   height: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   border: 1px solid rgba(138, 138, 138, 0.5);
   border-radius: 10px 10px 0px 0px;
@@ -42,16 +42,18 @@
 
 .modalHeaderText {
   font-size: 15px;
+  margin-right: 180px;
   color: rgb(83, 83, 83);
 }
 
 .modalCloseBtn {
-  margin-left: 150px;
   border: 0;
+  margin-right: 5px;
   background-color: white;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 28px;
   color: rgb(111, 111, 111);
+  border-radius: 10px 10px 0px 0px;
 }
 
 .modalContent {

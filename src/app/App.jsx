@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import './AppReset.css';
 import TradingPage from '../pages/TradingPage';
 import ArchivePage from '../pages/ArchivePage';
 import NavBar from '../components/widgets/NavBar/NavBar';

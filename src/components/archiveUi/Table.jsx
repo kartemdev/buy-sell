@@ -2,23 +2,30 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import TableHead from './TableHead';
 
+const TableDiv = styled.div`
+  width: 598px;
+`;
 const TableBody = styled.div`
+  height: 450px;
+  overflow-y: scroll;
+`;
+const TableItem = styled.div`
   display: flex;
-  margin-top: 8px;
+  margin-top: 10px;
+  padding-bottom: 4px;
   color: rgba(112, 112, 112, 0.8);
   border-bottom: 1px solid rgb(134, 134, 134, 0.3);
-  padding-bottom: 2px
 `;
 
 function Table() {
   const { list } = useSelector((store) => store.archiveRequests);
 
   return (
-    <div style={{ width: 598 }}>
+    <TableDiv>
       <TableHead />
-      <div>
+      <TableBody>
         {list.map((req) => (
-          <TableBody key={req.timestamp}>
+          <TableItem key={req.timestamp}>
             <p style={{
               width: 60,
               textAlign: 'center',
@@ -33,10 +40,10 @@ function Table() {
             <p style={{ width: 120, textAlign: 'center', }}>{req.volume}</p>
 
             <p style={{ width: 200, textAlign: 'center', }}>{req.timestamp}</p>
-          </TableBody>
+          </TableItem>
         ))}
-      </div>
-    </div>
+      </TableBody>
+    </TableDiv>
   );
 }
 

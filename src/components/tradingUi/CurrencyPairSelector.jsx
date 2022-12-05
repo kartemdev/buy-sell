@@ -10,6 +10,9 @@ const Select = styled.select`
   color: rgb(81, 81, 81);
   border: 1px solid rgba(138, 138, 138, 0.5);
 `;
+const Option = styled.option`
+  text-align: center;
+`;
 
 function CurrencyPairSelector() {
   const optionsList = useSelector((store) => store.currenciesPairs.list);
@@ -28,19 +31,17 @@ function CurrencyPairSelector() {
 
   return (
     <Select onChange={changePairHandler} defaultValue="selectPair">
-      <option
+      <Option
         value="selectPair"
         disabled
-        style={{ textAlign: 'center' }}
       >SELECT PAIR
-      </option>
+      </Option>
       {optionsList.map((pair) => (
-        <option
+        <Option
           key={pair.name}
           value={[pair.name, pair.sidePriceBuy, pair.sidePriceSell]}
-          style={{ textAlign: 'center' }}
         >{`${pair.name.split('_')[0] } ${ pair.name.split('_')[1]}`}
-        </option>
+        </Option>
       ))}
     </Select>
   );

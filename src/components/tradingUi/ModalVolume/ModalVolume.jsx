@@ -25,10 +25,11 @@ function ModalVolume() {
       volume: valueInput,
     }));
     dispatch(onClose());
+    setValueInput('');
   };
 
   return (
-    <Modal nameModal="Make order">
+    <Modal nameModal="Make order" setValue={setValueInput}>
       <div className={styles.modalContentTextContainer}>
         <p
           style={{ color: modal.side === 'BUY' ? 'rgb(68, 255, 47)' : 'rgb(255, 64, 47)' }}
@@ -54,7 +55,7 @@ function ModalVolume() {
       <div className={styles.modalBtnContainer}>
         <button
           type="button"
-          onClick={() => dispatch(onClose())}
+          onClick={() => { dispatch(onClose()); setValueInput(''); }}
           className={styles.modalCancelBtn}
         >Cancel
         </button>

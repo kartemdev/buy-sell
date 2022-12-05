@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onClose } from '../../../redux/slices/uiSlices/modalSlice';
 import styles from './Modal.module.css';
 
-function Modal({ children, nameModal }) {
+function Modal({ children, nameModal, setValue }) {
   const { modal } = useSelector((store) => store);
 
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ function Modal({ children, nameModal }) {
   return (
     <div
       className={modal.active ? `${styles.modal} ${styles.active}` : `${styles.modal}`}
-      onClick={() => dispatch(onClose())}
+      onClick={() => { dispatch(onClose()); setValue(''); }}
     >
       <div
         className={modal.active ? `${styles.modalBody} ${styles.active}` : `${styles.modalBody}`}
@@ -21,8 +21,8 @@ function Modal({ children, nameModal }) {
           <button
             className={styles.modalCloseBtn}
             type="button"
-            onClick={() => dispatch(onClose())}
-          >x
+            onClick={() => { dispatch(onClose()); setValue(''); }}
+          >&#215;
           </button>
         </div>
         <div className={styles.modalContent}>
