@@ -13,9 +13,9 @@ function TableHead() {
   return (
     <StyledTableHead>
       <h4 style={{ marginLeft: 16 }}>Side</h4>
-      <h4 style={{ marginLeft: 37 }}>Price</h4>
-      <h4 style={{ marginLeft: 54 }}>Instrument</h4>
-      <h4 style={{ marginLeft: 64 }}>Volume</h4>
+      <h4 style={{ marginLeft: 39 }}>Price</h4>
+      <h4 style={{ marginLeft: 55 }}>Instrument</h4>
+      <h4 style={{ marginLeft: 72 }}>Volume</h4>
       <h4 style={{ marginLeft: 95 }}>Timestamp</h4>
     </StyledTableHead>
   );
