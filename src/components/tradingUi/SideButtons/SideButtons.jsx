@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-// import { setPrices } from '../../../../redux/slices/chosenCurrencyPairSlice';
+// import { setPrices } from '../../../redux/slices/chosenCurrencyPairSlice';
 import { onOpen } from '../../../redux/slices/uiSlices/modalSlice';
 import styles from './SideButtons.module.css';
 
@@ -10,7 +10,7 @@ function SideButtons() {
 
   const dispatch = useDispatch();
 
-  // Код который меняет рандомно цену, приложение не сломает но работает плохо
+  // Код который меняет рандомно цену, приложение не сломает, но работает плохо
   // Для теста раскоментируйте строчку импорта setPrices и хука useSelector выше
 
   // if (chosenPair.name) {
