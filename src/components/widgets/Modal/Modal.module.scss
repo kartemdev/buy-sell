@@ -11,11 +11,11 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
-}
 
-.modal.active {
-  opacity: 1;
-  pointer-events: all;
+  &.active{
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 .modalBody {
@@ -25,10 +25,10 @@
   width: 300px;
   transform: scale(0.5);
   transition: 0.4s all;
-}
 
-.modalBody.active {
-  transform: scale(1);
+  &.active{
+    transform: scale(1);
+  }
 }
 
 .modalHeader {
@@ -38,30 +38,31 @@
   align-items: center;
   border: 1px solid rgba(138, 138, 138, 0.5);
   border-radius: 10px 10px 0px 0px;
-}
 
-.modalHeaderText {
-  font-size: 15px;
-  margin-right: 180px;
-  color: rgb(83, 83, 83);
-}
+  >p {
+      font-size: 15px;
+      margin-right: 180px;
+      color: rgb(117, 117, 117);
+  }
 
-.modalCloseBtn {
-  border: 0;
-  margin-right: 5px;
-  background-color: white;
-  cursor: pointer;
-  font-size: 28px;
-  color: rgb(111, 111, 111);
-  border-radius: 10px 10px 0px 0px;
+  >button {
+    border: 0;
+    margin-right: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 28px;
+    color: rgb(132, 132, 132);
+    border-radius: 10px 10px 0px 0px;
+  }
 }
 
 .modalContent {
-  height: 160px;
+  height: 157px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border-radius: 0px 0px 10px 10px;
   border-left: 1px solid rgba(138, 138, 138, 0.5);
   border-right: 1px solid rgba(138, 138, 138, 0.5);
   border-bottom: 1px solid rgba(138, 138, 138, 0.5);

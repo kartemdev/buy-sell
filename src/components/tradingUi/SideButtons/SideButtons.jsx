@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 // import { setPrices } from '../../../redux/slices/chosenCurrencyPairSlice';
 import { onOpen } from '../../../redux/slices/uiSlices/modalSlice';
-import styles from './SideButtons.module.css';
+import styles from './SideButtons.module.scss';
 
 function SideButtons() {
   const { chosenPair } = useSelector((store) => store.chosenCurrencyPair);
@@ -35,7 +35,7 @@ function SideButtons() {
     <div className={styles.btnContainer}>
       <button
         type="button"
-        className={chosenPair.name ? styles.btnBuy : `${styles.btnBuy } ${ styles.disabled}`}
+        className={chosenPair.name ? null : `${ styles.disabled}`}
         onClick={() => dispatch(onOpen('BUY'))}
       >
         BUY<br />
@@ -43,7 +43,7 @@ function SideButtons() {
       </button>
       <button
         type="button"
-        className={chosenPair.name ? styles.btnSell : `${styles.btnSell } ${ styles.disabled}`}
+        className={chosenPair.name ? null : `${ styles.disabled}`}
         onClick={() => dispatch(onOpen('SELL'))}
       >
         SELL<br />

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../../widgets/Modal/Modal';
 import { addRequest } from '../../../redux/slices/archiveRequestsSlice';
 import { onClose } from '../../../redux/slices/uiSlices/modalSlice';
-import styles from './ModalVolume.module.css';
+import styles from './ModalVolume.module.scss';
 
 function ModalVolume() {
   const { modal } = useSelector((store) => store);
@@ -31,17 +31,14 @@ function ModalVolume() {
   return (
     <Modal nameModal="Make order" setValue={setValueInput}>
       <div className={styles.modalContentTextContainer}>
-        <p
-          style={{ color: modal.side === 'BUY' ? 'rgb(68, 255, 47)' : 'rgb(255, 64, 47)' }}
-        >{modal.side}
-        </p>
-        <p className={styles.modalContentText}>
+        <p value={modal.side === 'BUY'}>{modal.side}</p>
+        <p>
           {modal.side === 'BUY' ? chosenPair.sidePriceBuy : chosenPair.sidePriceSell}{' '}
           {chosenPair.name}
         </p>
       </div>
-      <div>
-        <label className={styles.modalContentInputLabel} htmlFor="modalInput">
+      <div className={styles.modalContentInputContainer}>
+        <label htmlFor="modalInput">
           Volume
         </label>
         <input
@@ -49,20 +46,17 @@ function ModalVolume() {
           type="number"
           id="modalInput"
           value={valueInput}
-          className={styles.modalContentInput}
         />
       </div>
-      <div className={styles.modalBtnContainer}>
+      <div className={styles.modalContentBtnContainer}>
         <button
           type="button"
           onClick={() => { dispatch(onClose()); setValueInput(''); }}
-          className={styles.modalCancelBtn}
         >Cancel
         </button>
         <button
           type="button"
           onClick={submitHandler}
-          className={styles.modalSubmitBtn}
         >Ok
         </button>
       </div>

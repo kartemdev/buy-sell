@@ -1,0 +1,21 @@
+// Файл обнуляющих стилей
+@import './AppReset.css';
+
+.MainDiv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >div {
+    width: 600px;
+
+    >div {
+      height: 500px;
+      border-left: 1px solid rgba(138, 138, 138, 0.5);
+      border-right: 1px solid rgba(138, 138, 138, 0.5);
+      border-bottom: 1px solid rgba(138, 138, 138, 0.5);
+    }
+  }
+}
+

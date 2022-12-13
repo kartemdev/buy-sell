@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { onClose } from '../../../redux/slices/uiSlices/modalSlice';
-import styles from './Modal.module.css';
+import styles from './Modal.module.scss';
 
 function Modal({ children, nameModal, setValue }) {
   const { modal } = useSelector((store) => store);
@@ -17,9 +17,8 @@ function Modal({ children, nameModal, setValue }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className={styles.modalHeader}>
-          <p className={styles.modalHeaderText}>{nameModal}</p>
+          <p>{nameModal}</p>
           <button
-            className={styles.modalCloseBtn}
             type="button"
             onClick={() => { dispatch(onClose()); setValue(''); }}
           >&#215;

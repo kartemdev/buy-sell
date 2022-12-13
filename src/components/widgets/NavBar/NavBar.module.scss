@@ -15,10 +15,10 @@
   height: 30px;
   padding-left: 7px;
   padding-right: 7px;
-}
-
-.link[value=true] {
-  background-color: grey;
-  color: white;
-  border-radius: 9px 9px 0px 0px;
+  
+  &[value=true] {
+    background-color: grey;
+    color: white;
+    border-radius: 9px 9px 0px 0px;
+  }
 }

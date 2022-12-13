@@ -1,0 +1,72 @@
+.modalContentTextContainer {
+  display: flex;
+  font-size: 22px;
+
+  >p:first-child {
+    color: rgb(255, 64, 47);
+  }
+
+  >p:first-child[value=true] {
+    color: rgb(68, 255, 47);
+  }
+
+  >p:last-child {
+    margin-left: 5px;
+    color: grey;
+  }
+}
+
+.modalContentInputContainer {
+  >label {
+    margin-right: 5px;
+    color: grey;
+    font-size: 20px;
+  }
+
+  >input {
+    height: 27px;
+    width: 200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgba(124, 124, 124, 0.529);
+    border-radius: 5px;
+    font-size: 15px;
+    color: rgb(103, 103, 103);
+  }
+}
+
+.modalContentBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+
+  >button:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: grey;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  >button:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgb(30, 106, 211);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+}

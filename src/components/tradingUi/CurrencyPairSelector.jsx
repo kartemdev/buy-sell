@@ -40,7 +40,7 @@ function CurrencyPairSelector() {
         <Option
           key={pair.name}
           value={[pair.name, pair.sidePriceBuy, pair.sidePriceSell]}
-        >{`${pair.name.split('_')[0] } ${ pair.name.split('_')[1]}`}
+        >{`${pair.name.split('_')[0]} ${pair.name.split('_')[1]}`}
         </Option>
       ))}
     </Select>
