@@ -16,6 +16,7 @@ const Option = styled.option`
 
 function CurrencyPairSelector() {
   const optionsList = useSelector((store) => store.currenciesPairs.list);
+  const { chosenPair } = useSelector((store) => store.chosenCurrencyPair);
 
   const dispatch = useDispatch();
 
@@ -31,11 +32,20 @@ function CurrencyPairSelector() {
 
   return (
     <Select onChange={changePairHandler} defaultValue="selectPair">
-      <Option
-        value="selectPair"
-        disabled
-      >SELECT PAIR
-      </Option>
+      {chosenPair.name ? (
+        <Option
+          value={[chosenPair.name, chosenPair.sidePriceBuy, chosenPair.sidePriceSell]}
+          disabled
+        >
+          {`${chosenPair.name.split('_')[0]} ${chosenPair.name.split('_')[1]}`}
+        </Option>
+      ) : (
+        <Option
+          value="selectPair"
+          disabled
+        >SELECT PAIR
+        </Option>
+      )}
       {optionsList.map((pair) => (
         <Option
           key={pair.name}
